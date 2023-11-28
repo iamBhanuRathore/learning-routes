@@ -42,12 +42,10 @@
 
 .single-item:nth-child(4n) {
   background-color: #60b5ee;
-  color: white;
 }
 
 .single-item:nth-child(4n-1) {
   background-color: #60b5ee;
-  color: white;
 }
 
 .single-item {
