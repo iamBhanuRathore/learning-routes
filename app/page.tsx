@@ -1,7 +1,7 @@
+"use client";
 import React, { useState } from "react";
-import "./App.css"; // Import your CSS styles
 
-const Accordian = () => {
+const App = () => {
   const [accordionData, setAccordionData] = useState([
     {
       id: 1,
@@ -10,7 +10,7 @@ const Accordian = () => {
     },
   ]);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     setAccordionData((prevData) => {
       const updatedData = prevData.map((item, i) => ({
         ...item,
@@ -48,7 +48,7 @@ const Accordian = () => {
   );
 };
 
-export default MultiDataAccordion;
+export default App;
 
 const specialization = [
   {

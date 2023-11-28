@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* styles.css */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.accordion-header {
+  padding: 10px;
+  background-color: rgb(12, 126, 126);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.single-item:nth-child(4n) {
+  background-color: #60b5ee;
+}
+
+.single-item:nth-child(4n-1) {
+  background-color: #60b5ee;
+}
+
+.single-item {
+  width: 390px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 4px;
 }
